@@ -1,0 +1,64 @@
+.header {
+    display: flex;
+    width: 100%;
+    height: rem(80px);
+    align-items: center;
+    margin-top: rem(10px);
+    position: relative;
+}
+
+.header__logo {
+    margin-right: auto;
+    z-index: 10;
+
+    @include phones {
+        margin-top: rem(30px);
+    }
+}
+
+.logo-pic {
+    cursor: pointer;
+}
+
+.nav__list {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.nav__item {
+    display: inline-block;
+    flex-wrap: nowrap;
+    &:after {
+      display: inline-block;
+      vertical-align: middle;
+      content: ' ';
+      @include circle(rem(5px), #fff);
+      margin: 0 rem(2px);
+    }
+    &:last-child:after {
+      display: none;
+    }
+}
+
+.nav__item-link {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'ubuntur', Arial, Helvetica, sans-serif;
+    font-size: rem(13px);
+    line-height: 1.42em;
+    transition: .5s;
+    vertical-align: middle;
+    padding: rem(10px);
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.header__button {
+    height: rem(30px);
+
+    @include tablets {
+        margin-right: rem(70px);
+    }
+}

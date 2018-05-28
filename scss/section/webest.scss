@@ -1,0 +1,74 @@
+.webest {
+    background-image: url('/mr.burger/img/bg-stack.png');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+}
+
+.webest__container {
+    max-width: rem(940px);
+}
+
+.webest__body {
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+.webest__content {
+    width: 30%;
+    text-align: center;
+    margin-top: rem(85px);
+    margin-bottom: rem(100px);
+
+    @include phones {
+        margin: 0;
+        display: flex;
+        flex: 1;
+        width: 100%;
+        margin-bottom: rem(50px);
+    }
+}
+
+@include phones {
+    .webest__container {
+        .section__title {
+            margin-bottom: 40px;
+        }
+    }
+    .webest__content-description {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: start;
+    }
+}
+
+.webest__content-pic {
+    height: rem(100px);
+    margin-bottom: rem(30px);
+
+    @include phones {
+        width: 130px;
+        margin-right: 15px;
+    }
+}
+
+.webest__content-text {
+    font-family: 'lifehack', Arial, Helvetica, sans-serif;
+    font-size: rem(24px);
+    margin-bottom: rem(10px);
+}
+
+.webest__content-desc {
+    font-family: 'ubuntur', Arial, Helvetica, sans-serif;
+    font-size: rem(14px);
+    color: #2f3234;
+    line-height: rem(24px);
+    opacity: .8;
+}

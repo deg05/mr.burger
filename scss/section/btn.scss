@@ -1,0 +1,19 @@
+.order__button {
+    padding: rem(10px) rem(15px);
+    border-radius: rem(5px);
+    border: none;
+    background: $orange;
+    margin-left: rem(15px);
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'ubuntur', Arial, Helvetica, sans-serif;
+    font-size: rem(13px);
+    line-height: 1.42em;
+    cursor: pointer;
+    transition: .5s;
+    vertical-align: middle;
+    &:hover {
+        background: darken($orange, 10%);
+        text-decoration: underline;
+    }
+}

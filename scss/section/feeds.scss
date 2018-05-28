@@ -1,0 +1,236 @@
+.feeds__item {
+    height: 100vh;
+    width: 100%;
+    min-height: rem(650px);
+    min-width: rem(940px);
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+    overflow: hidden;
+
+    @include tablets {
+        min-height: rem(600px);
+        min-width: rem(320px);
+    }
+
+    @include phones {
+        //min-height: rem(800px);
+        //min-width: rem(320px);
+    }
+}
+
+.feeds__content {
+    width: 25%;
+    height: 50vh;
+    padding: rem(20px);
+    min-height: rem(325px);
+    min-width: rem(235px);
+    &:hover {
+        box-shadow: 0 0 0 rem(99999px) rgba(0, 0, 0, 0.50) inset;
+        transition: all .25s linear;
+    }
+
+    @include tablets {
+        width: 50%;
+        height: 25vh;
+        min-height: rem(150px);
+        min-width: rem(80px);
+        justify-content: center;
+        align-items: center;
+    }
+
+    @include phones {
+        min-height: rem(150px);
+        min-width: rem(80px);
+    }
+}
+
+.feeds__content-content {
+    opacity: 0;
+    transition: all .25s linear;
+    height: 100%;
+    text-overflow: ellipsis;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    @include phones {
+        justify-content: center;
+    }
+}
+
+.feeds__content--polina {
+    background-image: url('/mr.burger/img/cute.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+}
+
+.feeds__content--konstantin {
+    background-image: url('/mr.burger/img/hipster.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+}
+
+.feeds__content--ekaterina {
+    background-image: url('/mr.burger/img/girl.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+}
+
+.feeds__content--ivan {
+    background-image: url('/mr.burger/img/hat.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+}
+
+.feeds__content--dmitriy {
+    background-image: url('/mr.burger/img/redhead.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+}
+
+.feeds__content--anastasia {
+    background-image: url('/mr.burger/img/glasses.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+}
+
+.feeds__content--anatolii {
+    background-image: url('/mr.burger/img/grandpa.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+}
+
+.feeds__content--boroda {
+    background-image: url('/mr.burger/img/beard.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+}
+
+.feeds__content-name {
+    font-family: 'gagalin', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: rem(14px);
+    margin-bottom: rem(30px);
+    margin-top: rem(30px);
+    text-transform: uppercase;
+
+    @include tablets {
+        margin-bottom: rem(20px);
+        margin-top: rem(12px);
+    }
+}
+
+.feeds__content-feed {
+    font-family: 'ubuntul', Arial, Helvetica, sans-serif;
+    line-height: rem(24px);
+    margin-bottom: rem(20px);
+    height: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include phones {
+        display: none;
+    }
+}
+
+.feeds__content-button {
+    height: rem(35px);
+    width: rem(110px);
+    border-radius: rem(5px);
+    border: none;
+    background-color: #2f3234;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'ubuntum', Arial, Helvetica, sans-serif;
+    font-size: rem(13px);
+    cursor: pointer;
+}
+
+.feeds__content_active-feed {
+    position: fixed;
+    background: rgba($dark, 0.92);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -5;
+    opacity: 0;
+    transition: all .5s linear;
+}
+
+.feeds__content_active-feed--active {
+    z-index: 5;
+    opacity: 1;
+    transition: all .5s linear;
+}
+
+.feeds__content_active-feed-wrap {
+    position: fixed;
+    width: rem(460px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 20px;
+    background: #fff;
+    color: $dark;
+    border-radius: 5px;
+    z-index: 2;
+    transition: all .5s linear;
+
+    @include phones {
+        width: 95%;
+    }
+}
+
+.feeds__content_active-feed_name {
+    font-family: 'gagalin', Arial, Helvetica, sans-serif;
+    font-size: rem(14px);
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.feeds__content_active-feed_feed {
+    font-family: 'ubuntul', Arial, Helvetica, sans-serif;
+    font-size: rem(14px);
+    line-height: rem(24px);
+}
+
+.feeds__content_active-feed_close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 15px;
+    width: 15px;
+    background: url('/2-Burgershop/img/icons/close.svg') center center no-repeat;
+    background-size: cover;
+    cursor: pointer;    
+}

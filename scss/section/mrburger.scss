@@ -1,0 +1,86 @@
+.burger {
+    background-image: url('/mr.burger/img/video-bg.png');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+}
+
+.burger__container {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    max-width: rem(940px);
+}
+
+.burger__content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: rem(45px);
+    margin-bottom: rem(90px);
+    justify-content: center;
+
+    @include tablets {
+        flex-direction: column;
+        text-align: center;        
+    }
+}
+
+.burger__img, .burger__description {
+    width: 50%;
+
+    @include tablets {
+        width: 80%;
+    }
+
+    @include phones {
+        width: 100%;
+    }
+}
+
+.burger__img {
+    display: block;
+    max-width: 100%;
+
+    @include tablets {
+        margin-bottom: rem(40px);
+    }
+
+    @include phones {
+        margin-top: rem(40px);
+        max-width: rem(380px);
+        margin-bottom: rem(10px);
+    }
+}
+
+.burger__img-pic {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+}
+
+.section__title {
+    font-size: rem(72px);
+    margin: 0;
+
+    @include tablets {
+        font-size: rem(62px);
+    }
+}
+
+.burger__description-text {
+    font-family: 'lifehack', Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: rem(65px);
+    line-height: 0.9;
+
+    @include tablets {
+        font-size: rem(55px);
+    }
+}
+
+.burger__arrow-scroll {
+    margin-top: rem(40px);
+    margin-bottom: rem(40px);
+}

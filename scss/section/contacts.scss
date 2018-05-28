@@ -1,0 +1,85 @@
+.contacts {
+    position: relative;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    background: url('/mr.burger/img/footer-bg.png') center center no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+.footer__contacts {    
+    max-width: rem(940px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: rem(60px);
+    bottom: 0;
+    margin: auto;
+
+    @include phones {
+        height: 115px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.footer__col {
+    color: #fff;
+    margin: 0;
+    font-size: rem(14px);
+    line-height: 0.5em;
+    font-family: 'ubuntul', Arial, Helvetica, sans-serif;
+}
+
+.footer__phone {
+    margin-bottom: rem(10px);
+
+    @include phones {
+        margin-bottom: 10px;
+    }
+}
+
+.footer__phone-number {
+    color: $orange;
+    font-family: 'ubuntub', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.fa-phone {
+    margin-right: rem(10px);
+}
+
+.footer__socials {
+    display: flex;
+    height: 100%;
+    font-size: rem(20px);
+}
+
+.socials__link {
+    color: #fff;
+    opacity: 0.3;
+    transition: all .25s linear;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.footer__socials-item {
+    margin-left: rem(20px);
+
+    &:first-child {
+        margin-left: 0;
+    }
+}
