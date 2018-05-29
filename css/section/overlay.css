@@ -1,0 +1,69 @@
+.pagination {
+  position: fixed;
+  top: rem(88px);
+  right: rem(70px); }
+
+.pagination__list {
+  position: relative; }
+
+.pagination__list-item {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: rem(14px);
+  height: rem(14px);
+  border-radius: 50%;
+  margin: rem(5px);
+  cursor: pointer; }
+  .pagination__list-item:before {
+    content: "";
+    position: absolute;
+    width: rem(4px);
+    height: rem(4px);
+    border: solid rem(1px) #fff;
+    border-radius: 50%;
+    top: rem(5px);
+    left: rem(5px);
+    -webkit-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    transition: all .25s linear; }
+  .pagination__list-item:hover:before {
+    content: "";
+    position: absolute;
+    width: rem(14px);
+    height: rem(14px);
+    border: solid rem(1px) #fff;
+    border-radius: 50%;
+    top: 0;
+    left: 0; }
+
+.pagination__list-item-active:before {
+  content: "";
+  position: absolute;
+  width: rem(14px);
+  height: rem(14px);
+  border: solid rem(1px) #fff;
+  border-radius: 50%;
+  top: 0;
+  left: 0; }
+
+.pagination__list-item:after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  height: rem(4px);
+  width: rem(4px);
+  border-radius: 50%;
+  top: rem(5px);
+  left: rem(5px); }
+
+@media screen and (max-width: rem(768px)) {
+  .pagination {
+    display: none; } }
+
+.pagination__list-item-link {
+  height: 100%;
+  width: 100%;
+  z-index: 1; }

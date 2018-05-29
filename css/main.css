@@ -1349,3 +1349,73 @@ input[type="radio"]:checked ~ .form__radio-name:after {
   -webkit-transition: all .5s linear;
   -o-transition: all .5s linear;
   transition: all .5s linear; }
+
+.pagination {
+  position: fixed;
+  top: 5.5rem;
+  right: 4.375rem; }
+
+.pagination__list {
+  position: relative; }
+
+.pagination__list-item {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 0.875rem;
+  height: 0.875rem;
+  border-radius: 50%;
+  margin: 0.3125rem;
+  cursor: pointer; }
+  .pagination__list-item:before {
+    content: "";
+    position: absolute;
+    width: 0.25rem;
+    height: 0.25rem;
+    border: solid 0.0625rem #fff;
+    border-radius: 50%;
+    top: 0.3125rem;
+    left: 0.3125rem;
+    -webkit-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    transition: all .25s linear; }
+  .pagination__list-item:hover:before {
+    content: "";
+    position: absolute;
+    width: 0.875rem;
+    height: 0.875rem;
+    border: solid 0.0625rem #fff;
+    border-radius: 50%;
+    top: 0;
+    left: 0; }
+
+.pagination__list-item-active:before {
+  content: "";
+  position: absolute;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: solid 0.0625rem #fff;
+  border-radius: 50%;
+  top: 0;
+  left: 0; }
+
+.pagination__list-item:after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  height: 0.25rem;
+  width: 0.25rem;
+  border-radius: 50%;
+  top: 0.3125rem;
+  left: 0.3125rem; }
+
+@media screen and (max-width: 48rem) {
+  .pagination {
+    display: none; } }
+
+.pagination__list-item-link {
+  height: 100%;
+  width: 100%;
+  z-index: 1; }
