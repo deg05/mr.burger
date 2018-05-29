@@ -1,0 +1,122 @@
+.menu {
+    background: url('/mr.burger/img/bg (1).png') center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.section__title-menu {
+    color: #fff;
+    position: absolute;
+    top: rem(110px);
+    left: rem(90px);
+
+    @include tablets {
+        left: 24px;
+    }
+}
+
+.menu-accord {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+
+    @include tablets {
+        width: 100%;
+    }
+}
+
+.menu-accord__item {
+    display: flex;
+    transition: all .25s linear;
+}
+
+.menu-accord__title {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'gagalin', Arial, Helvetica, sans-serif;
+    font-size: rem(40px);
+    height: 100%;
+    width: rem(80px);
+    position: relative;
+    flex: none;
+    cursor: pointer;
+}
+
+.menu-accord__title-text {
+    position: absolute;
+    width: rem(300px);
+    height: rem(80px);
+    top: 45%;
+    left: rem(-100px);
+    bottom: 0;
+    transform: rotate(-90deg);
+}
+
+.menu-accord__title-meatlovers {
+    background: url('/mr.burger/img/meatlovers.png') center center no-repeat;
+    background-size: cover;
+}
+
+.menu-accord__title-vegans {
+    background: url('/mr.burger/img/vegans.png') center center no-repeat;
+    background-size: cover;
+}
+
+.menu-accord__title-diet {
+    background: url('/mr.burger/img/diet.png') center center no-repeat;
+    background-size: cover;
+}
+
+.menu-accord__text {
+    width: 0;
+    overflow: hidden;
+    transition: .25s linear;
+    height: 100%;
+    background: rgba($dark, 0.93);
+    
+    @include tablets {
+        transition: none;
+
+    }
+}
+
+.menu-accord__item-active {
+    .menu-accord__text {
+        width: rem(510px);
+        height: 100%;
+        padding: rem(60px) rem(35px);
+        color: #fff;
+        font-family: 'ubuntul', Arial, Helvetica, sans-serif;
+        font-size: rem(14px);
+        line-height: rem(24px);
+        background: rgba($dark, 0.93);
+        transition: .25s linear;
+        overflow: hidden;
+
+        @include tablets {
+            width: 100%;
+            transition: none;
+            padding: rem(50px) rem(25px);
+        }
+
+        @include phones {
+            width: 100%;
+            transition: none;
+            padding: rem(30px) rem(15px);
+        }
+    }
+
+    .menu-accord__title-text {
+        color: $yellow;
+    }
+
+    .section__title {
+        opacity: 0;
+    }
+}

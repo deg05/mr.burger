@@ -1,0 +1,342 @@
+.order {
+    background: url('/mr.burger/img/bg (2).png') center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.order__container {
+    width: 95%;
+}
+
+.order-section__title {
+    margin-bottom: rem(60px);
+
+    @include tablets {
+        font-size: rem(62px);
+        text-align: center;
+        margin-bottom: rem(40px);
+    }
+
+    @include phones {
+        margin-bottom: rem(0px);
+        font-size: 7vh;
+    }
+}
+
+.form {
+    max-width: rem(940px);
+    font-size: rem(14px);
+    font-family: 'ubuntul', Arial, Helvetica, sans-serif;
+}
+
+.form__elem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    @include tablets {
+        flex-direction: column;
+    }
+}
+
+.form__content {
+    width: 50%;
+    margin-right: 20px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include tablets {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+.form__block-title {
+    color: #fff;
+    margin-bottom: rem(10px);
+}
+
+.form__input {
+    border: none;
+    border-radius: rem(5px);
+    padding: rem(5px);
+    width: 100%;
+    height: rem(33px);
+    &:focus {
+        outline-color: $orange;
+        transition: all .5s linear;
+    }
+
+    @include phones {
+        height: rem(23px);
+    }
+
+}
+
+.form__row {
+    display: flex;
+    margin-bottom: rem(15px);
+}
+
+.form__block {
+    flex: 1;
+    margin-right: rem(20px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form__textarea-input {
+    width: 100%;
+    height: rem(110px);
+    border: none;
+    border-radius: rem(5px);
+    resize: none;
+    padding: rem(5px);
+    &:focus {
+        outline-color: $orange;
+        transition: all .5s linear;
+    }
+
+    @include phones {
+        margin-bottom: rem(10px);
+        height: 10vh;
+    }
+}
+
+.form__radio-container {
+    display: flex;
+    color: #fff;
+    font-size: rem(14px);
+    font-family: 'ubuntul', Arial, Helvetica, sans-serif;
+    align-items: center;
+    position: relative;
+
+    @include phones {
+        justify-content: center;
+    }
+}
+
+.form__radio {
+    margin-right: rem(15px);
+    align-items: center;
+    position: relative;
+    display: flex;
+    margin-top: rem(-3px);
+    margin-bottom: rem(9px);
+}
+
+.form__radio-elem {
+    margin-right: rem(10px);
+    display: none;
+}
+
+.form__radio-name {
+    position: relative;
+    font-size: rem(14px);
+    font-weight: lighter;
+    height: 100%;
+    padding-left: rem(25px);
+    transition: all .5s linear;
+    cursor: pointer;
+
+    &:before {
+    content: '';
+    display: flex;
+    position: absolute;
+    height: rem(15px);
+    width: rem(15px);
+    border-radius: 50%;
+    border: rem(1px) solid #cecece;
+    background: #f7f7f7;
+    vertical-align: middle;
+    top: rem(2px);
+    left: 0;
+    }
+
+    &:after {
+    content: '';
+    position: absolute;
+    border-color: $orange;
+    background: $orange;
+    height: rem(7px);
+    width: rem(7px);
+    border-radius: 50%;
+    top: rem(6px);
+    left: rem(4px);
+    opacity: 0;
+    }
+}
+
+input[type="radio"]:checked ~ .form__radio-name:after {
+    content: '';
+    transition: all .25s linear;
+    opacity: 1;
+}
+
+.form__checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    .form__checkbox-lable {
+        display: block;
+        width: rem(15px);
+        height: rem(15px);
+        cursor: pointer;
+        position: absolute;
+        top: rem(2px);
+        left: 0;
+        background: #fff;
+        border-radius: rem(2px);
+        color: #fff;
+        &:after {
+            content: '';
+            width: rem(9px);
+            height: rem(5px);
+            position: absolute;
+            color: #fff;
+            top: rem(4px);
+            left: rem(3px);
+            border: rem(3px) solid $orange;
+            border-top: none;
+            border-right: none;
+            background: transparent;
+            opacity: 0;
+            transform: rotate(-45deg);
+        }
+        &:hover::after {
+            opacity: 0.5;
+        }        
+    }
+    input[type=checkbox] {
+        visibility: hidden;
+        &:checked + label:after {
+            opacity: 1;
+        }
+    }
+
+    @include phones {
+        display: inline-block;
+        text-align: center;
+
+        .form__block-cbx {
+            text-align: center;
+        }
+    }
+}
+
+@include phones {
+    .form__block-cbx {
+        text-align: center;
+    }
+}
+
+.form__checkbox-name {
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+    margin-left: rem(12px);
+}
+
+
+.form-order__button {
+    margin: 0;
+}
+
+.form__block-btn {
+    display: flex;
+    align-items: center;
+
+    @include phones {
+        justify-content: center;
+    }
+}
+
+.form__reset-btn {
+    margin-left: rem(20px);
+    color: #fff;
+    font-size: rem(14px);
+    font-family: 'ubuntul', Arial, Helvetica, sans-serif;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@include phones {
+    .form__block-deactive {
+        display: none;
+    }
+
+    .form__block-margin {
+        margin-right: 0;
+    }
+}
+
+.success-order {
+    position: fixed;
+    width: auto;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 20px;
+    background: #cecece;
+    color: $dark;
+    border-radius: 5px;
+    z-index: -1;
+    opacity: 0;
+    transition: all .5s linear;
+}
+
+.success-order--active {
+    position: fixed;
+    width: auto;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 20px;
+    background: #cecece;
+    color: $dark;
+    border-radius: 5px;
+    z-index: 2;
+    opacity: .9;
+    transition: all .5s linear;
+}
+
+.error-order {
+    position: fixed;
+    width: auto;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 20px;
+    background: #cecece;
+    color: $dark;
+    border-radius: 5px;
+    z-index: -1;
+    opacity: 0;
+    transition: all .5s linear;
+}
+
+.error-order--active {
+    position: fixed;
+    width: auto;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 20px;
+    background: #cecece;
+    color: $dark;
+    border-radius: 5px;
+    z-index: 2;
+    opacity: .9;
+    transition: all .5s linear;
+}
